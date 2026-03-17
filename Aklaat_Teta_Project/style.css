@@ -1,0 +1,765 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif; 
+    direction: rtl; 
+    text-align: right; 
+    background-color: #f5d9b4;
+    color: #59381E; 
+}
+
+a {
+    text-decoration: none;
+    color: #59381E; 
+}
+.main-header {
+    background-color: #f5d9b4; 
+    padding: 15px 30px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 5%; 
+    flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 196px;
+  height: 86px;
+}
+
+
+
+.nav-links {
+    list-style: none; 
+    display: flex;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.nav-links li {
+    margin-right: 25px;
+}
+
+.nav-links a {
+    color: #59381E; 
+    font-weight: bold;
+    transition: color 0.3s; 
+}
+
+.nav-links a:hover {
+    color: #8C3A00; 
+}
+/*وصفاتنا*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;      
+    position: absolute;  
+    background-color: #fcecd7; 
+    min-width: 150px;   
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+    z-index: 1;         
+    padding: 0;
+    list-style: none;
+    border-radius: 5px;
+}
+.dropdown-content li a {
+    color: #59381E;
+    padding: 10px 15px;
+    display: block;      
+    border-bottom: 1px solid #eee; 
+}
+.dropdown:hover .dropdown-content {
+    display: block;     
+}
+.dropdown-content li a:hover {
+    background-color: #8C3A00;
+    color: white;
+}
+/*قسم الهيرو*/
+.hero-section {
+    height: 85vh; 
+    background-image: url('images/hero_background.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: right; 
+    background-position: center center;
+}
+.hero-content {
+    color: #ffffff; 
+    max-width: 600px;
+    padding: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); 
+}
+
+.hero-content h2 {
+    font-size: 3.5rem; 
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.cta-button {
+    display: inline-block; 
+    background-color: #8C3A00; 
+    color: rgb(255, 255, 255);
+    padding: 12px 30px;
+    border-radius: 5px; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s; 
+}
+.cta-button:hover {
+    background-color: #A84920;
+}
+.featured-recipes {
+    padding: 60px 10% ; 
+    text-align: center;
+}
+
+.featured-recipes h3 {
+    font-size: 2.5rem;
+    color: #8C3A00; 
+    margin-bottom: 40px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+}
+/* .card .icon-img {
+  width: 15px;
+  height: 15px;
+}
+img.icon-img{
+width: 20px;
+  height: 20px;
+   object-fit: contain;
+  display: inline-block;
+
+} */
+
+.recipe-card {
+    background-color: #fff; 
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; 
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+}
+
+.card-content {
+    padding: 20px;
+    text-align: right; 
+}
+
+.card-content h4 {
+    color: #8C3A00;
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+
+.card-content .description {
+    font-size: 0.9rem;
+    color: #59381E;
+    margin-bottom: 15px;
+}
+
+.icon-img {
+  width: 20px !important;
+  height: 20px !important;
+   /* margin-right: 0; */
+}
+.time-box1 {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* المسافة بين النص والصورة */
+}
+.time-box2 {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* المسافة بين النص والصورة */
+}
+.details {
+    /* margin-left: 5px; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #a84920;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.main-footer {
+    background-color: #59381E; 
+    color: #FFF5E0; 
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+/*الصفخة التانية*/
+.page-title {
+    background-color: #4A5D23; 
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 5px solid #8C0000; 
+}
+.page-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+/*صفحة الوصفة الفردية*/
+.single-recipe-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.dish-title {
+    color: #4A5D23; 
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.recipe-main-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.sub-title-red {
+    color: #A6192E; 
+    border-bottom: 2px solid #FFF5E0;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.olive-list {
+    color: #3D550C; 
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.olive-list li {
+    margin-bottom: 10px;
+}
+
+.numbered-steps {
+    list-style: none;
+    counter-reset: my-counter;
+    padding: 0;
+}
+
+.numbered-steps li {
+    counter-increment: my-counter;
+    position: relative;
+    padding-right: 50px;
+    margin-bottom: 20px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.numbered-steps li::before {
+    content: counter(my-counter);
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background-color: #3D550C;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.recipe-actions {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-action {
+    background: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+}
+
+.print-btn {
+    border: 2px solid #3D550C;
+    color: #3D550C;
+}
+
+.fav-btn {
+    border: 2px solid #A6192E;
+    color: #A6192E;
+}
+
+.teta-legacy-card {
+    background-color: #FAF9F6; 
+    border-right: 6px solid #4A5D23;
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.comments-area textarea {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.submit-comment-btn {
+    background-color: #4A5D23; 
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+}
+
+.submit-comment-btn:hover {
+    background-color: #3D550C;
+}
+/*  رابط العودة */
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    color: #4A5D23;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-link a:hover {
+    color: #A6192E;
+    margin-right: 5px; 
+}
+
+.recipe-main-image img {
+    border: 5px solid #FDF5E6; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+}
+
+.recipe-main-image img:hover {
+    transform: scale(1.02); 
+}
+
+.btn-action:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/*عشان الجوالات*/
+/* @media (max-width: 600px) {
+    .single-recipe-container {
+        padding: 15px;
+        margin: 10px;
+    }
+    .dish-title {
+        font-size: 1.8rem;
+    }
+    .recipe-actions {
+        flex-direction: column; 
+    }
+} */
+/* --- تعديلات خاصة بشاشة الجوال فقط (أقل من 768 بكسل) --- */
+@media screen and (max-width: 768px) {
+    /* 1. جعل شريط التنقل عمودي وتوسيط العناصر */
+    .navbar {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;    
+        padding: 15px 0;
+        height: auto;           
+    }
+
+    /* 2. توسيط اللوجو وإضافة مسافة تحته */
+    .logo {
+        margin-bottom: 20px;    
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo-img {
+        max-width: 140px; /* تصغير اللوجو ليناسب شاشة الجوال */
+        height: auto;
+    }
+
+    /* 3. ترتيب روابط التنقل في المنتصف */
+    .nav-links {
+        display: flex;
+        flex-direction: row;    
+        flex-wrap: wrap;        
+        justify-content: center;
+        gap: 12px;              
+        padding: 0;
+        margin: 0;
+    }
+
+    /* 4. حل مشكلة القائمة المنسدلة (وصفاتنا) لتثبت عند الضغط */
+    .dropdown:active .dropdown-content, 
+    .dropdown:focus .dropdown-content,
+    .dropdown-content.show { /* إضافة كلاس show للتحكم عبر JS */
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        z-index: 1000;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        min-width: 160px;
+    }
+}
+/* صفحة عن تيتا*/
+.about-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+.main-title-olive {
+    color: #556B2F;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #8B4513;
+    margin-bottom: 40px;
+}
+
+.teta-hero-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.soft-focus-img {
+    width: 100%;
+    max-width: 600px;
+    border: 4px solid #B8860B; 
+    border-radius: 15px;
+    filter: blur(0.3px) contrast(95%); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.highlight-red {
+    color: #C8102E;
+    font-weight: bold;
+}
+
+.mission-text {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #556B2F; 
+}
+
+.quote-box {
+    background-color: #D2B48C; 
+    border-right: 8px solid #556B2F;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 700px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.quote-box p {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #3e2723;
+    margin-bottom: 10px;
+}
+
+.timeline-section {
+    margin-top: 80px;
+}
+
+.sub-title-olive {
+    color: #556B2F;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #556B2F; 
+    top: 0;
+    bottom: 0;
+    right: 20px; 
+}
+
+.timeline-item {
+    padding: 10px 50px 40px 0; 
+    position: relative;
+    text-align: right;
+}
+.dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #7CFC00;
+    border: 4px solid #556B2F;
+    border-radius: 50%;
+    right: 9px;
+    top: 15px;
+    z-index: 2;
+}
+
+.timeline-content h4 {
+    color: #556B2F;
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #666;
+}
+/* تواصلو معنا */
+
+.title-palestine-red {
+    color: #C8102E; 
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 30px;
+}
+
+.motivational-desc {
+    color: #556B2F; 
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.grandma-contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fcf9f2;
+    padding: 30px;
+    border: 1px solid #D2B48C; 
+    border-radius: 12px;
+}
+
+.input-group label {
+    display: block;
+    color: #556B2F;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D2B48C;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fffdfa;
+}
+
+.btn-submit-green {
+    background-color: #558b1e;
+    color: #fcf9f2; 
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit-green:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(124, 252, 0, 0.3);
+}
+
+.social-icons-gold a {
+    color: #B8860B; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.contact-list-olive {
+    text-align: center;
+    color: #556B2F;
+    margin: 40px 0 20px;
+}
+
+/*تنسيقات الفوتر الجديدة*/
+.add-recipe-call {/* اضيفي وصفتك */
+    background-color: #fcf9f2; 
+    padding: 40px;
+    text-align: center;
+    border: 2px dashed #B8860B;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 15px;
+}
+
+.btn-primary-olive {
+    display: inline-block;
+    background-color: #556B2F;
+    color: #fcf9f2;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary-olive:hover {
+    background-color: #C8102E; 
+}
+/*كود زر المفضلة الجديد*/
+#add-to-favorites {
+    background-color: transparent; 
+    color: #4a5d23;               
+    border: 2px solid #4a5d23;    
+    padding: 10px 20px;
+    border-radius: 8px;           
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;                    
+    transition: all 0.3s ease;   
+}
+#add-to-favorites:hover {
+    background-color: #4a5d23;
+    color: white;
+}
+#add-to-favorites:active {
+    transform: scale(0.95); 
+    background-color: #4a5d23;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #556B2F;
+    color: white;
+    text-align: right;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: #B8860B; 
+}
+
+.footer-section h4 {
+    margin-bottom: 20px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 12px; 
+}
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/*الكود الخاص بصفحة مفضلاتاي*/
+.recipe-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;   
+}
+
+.recipe-card {
+    width: 100%;       
+    overflow: hidden;  
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamic-title">أكلات تيتا | تفاصيل الوصفة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار أكلات تيتا" class="logo-img">
+                <!-- <h1>أكلات تيتا</h1>  -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="dropdown">
+                    <a href="recipes.html" class="dropbtn">وصفاتنا ▾</a>
+                    <ul class="dropdown-content">
+                      <li><a href="recipes.html?category=all">الكل</a></li>
+                         <li><a href="recipes.html?category=main">أطباق رئيسية</a></li>
+                         <li><a href="recipes.html?category=side">مقبلات</a></li>
+                         <li><a href="recipes.html?category=sweet">حلويات</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">قصة تيتا</a></li>
+                <li><a href="contact.html">تواصلوا معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="single-recipe-container">
+        <div class="back-link">
+    <a href="recipes.html">← العودة لكل الوصفات</a>
+</div>
+    <h1 id="recipe-title" class="dish-title">جاري التحميل...</h1>
+    
+    <div class="recipe-content-wrapper">
+        <div class="recipe-main-image">
+            <img id="recipe-img" src="" alt="">
+        </div>
+
+        <div class="recipe-actions">
+            <button class="btn-action print-btn">🖨️ اطبع الوصفة</button>
+            <button id="add-to-favorites" class="btn-primary">أضف إلى مفضلاتي ❤️</button>
+        </div>
+
+        <section class="ingredients-section">
+            <h2 class="sub-title-red">المكونات والمقادير</h2>
+            <ul id="recipe-ingredients" class="olive-list">
+                </ul>
+        </section>
+
+        <section class="steps-section">
+            <h2 class="sub-title-red">طريقة التحضير</h2>
+            <ol id="recipe-steps" class="numbered-steps">
+                </ol>
+        </section>
+
+        <div class="teta-legacy-card">
+            <h3>قصة تيتا..</h3>
+            <p id="recipe-story"></p>
+        </div>
+    </div>
+    <section class="comments-area">
+    <h3 class="sub-title-red">شاركينا تجربتك</h3>
+    <textarea placeholder="هل جربتِ هذه الوصفة من قبل؟ أضيفي تعليقك هنا..."></textarea>
+    <button class="submit-comment-btn">إرسال التعليق</button>
+</section>
+</main>
+<script src="script.js"></script>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>أكلات تيتا</h3>
+            <p>نحيي تراثنا الفلسطيني من خلال مطبخنا الأصيل، ونحفظ وصفات الجدات للأجيال القادمة.</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>روابط سريعة</h4>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="recipes.html">وصفاتنا</a></li>
+                <li><a href="favorites.html">وصفاتي المفضلة</a></li>
+                <li><a href="team.html">فريق العمل والمصادر</a></li>
+                <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                <li><a href="contact.html">تواصلوا معنا</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>تواصل مباشر</h4>
+            <div class="time-box2">
+                        <img src="images/mail.png" class="icon-img" >
+                        <p>info@teta.com</p>
+                        </div>
+            
+            <div class="time-box2">
+                        <img src="images/pin.png" class="icon-img" >
+                        <p>فلسطين، القدس</p>
+                        </div>
+            
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 جميع الحقوق محفوظة لمشروع أكلات تيتا | إعداد طالبتين متميزتين</p>
+    </div>
+</footer>
+
+</body>
+</html>
